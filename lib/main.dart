@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:usedev/src/home_screen.dart';
+import 'src/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,14 +8,23 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'UseDev',
+      title: 'YGG Geek',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF121212),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1F1F1F),
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.white),
+        ),
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white70),
+        ),
       ),
       home: const HomeScreen(),
     );
